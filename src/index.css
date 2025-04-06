@@ -2,13 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Add these global styles to your index.css */
+:root {
+  --bg-primary: #1a1a2e;
+  --bg-secondary: #16213e;
+  --accent-primary: #e94560;
+  --accent-secondary: #ff7b89;
+  --text-primary: #e0e0e0;
+  --text-secondary: #ffffff;
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  @apply antialiased;
+  background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+  color: var(--text-primary);
 }
 
 code {
